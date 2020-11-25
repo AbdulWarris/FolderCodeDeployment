@@ -60,7 +60,7 @@ def main():
         print "Backup in process... of destination " + mVar_dirDes + " if exist in src " + mVar_dirSrc 
         if not os.path.exists(mParam_dirBackup):
             os.makedirs(mParam_dirBackup)
-        compare_dir_layout(mVar_dirSrc, mVar_dirDes,mParam_dirBackup)
+        compareAndCopy_dir_process(mVar_dirSrc, mVar_dirDes,mParam_dirBackup)
         print "Start Copy in process... of destination folder" + mVar_dirDes 
         distutils.dir_util.copy_tree(mVar_dirSrc,mVar_dirDes)
     except Exception as e:
